@@ -43,7 +43,7 @@
             // 
             // imageListPanel
             // 
-            this.imageListPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.imageListPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.imageListPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.imageListPanel.Controls.Add(this.imgListBox);
@@ -95,7 +95,6 @@
             this.imgListBox.Name = "imgListBox";
             this.imgListBox.Size = new System.Drawing.Size(470, 492);
             this.imgListBox.TabIndex = 1;
-            this.imgListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
             // 
             // uploadText
             // 
@@ -105,7 +104,6 @@
             this.uploadText.Size = new System.Drawing.Size(1009, 22);
             this.uploadText.TabIndex = 2;
             this.uploadText.TabStop = false;
-            this.uploadText.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // btnBrowse
             // 
@@ -161,4 +159,3 @@
         private System.Windows.Forms.Button btnUpload;
     }
 }
-

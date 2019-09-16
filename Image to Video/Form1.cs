@@ -18,12 +18,12 @@ namespace Image_to_Video
     public partial class Form1 : Form
     {
         OpenFileDialog ofd;
-        List<Image<Rgb, Byte>> imageList;
+        List<String> imageFileNameList;
 
         public Form1()
         {
             InitializeComponent();
-            imageList = new List<Image<Rgb, byte>>();
+            imageFileNameList = new List<String>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,17 +38,18 @@ namespace Image_to_Video
 
 
         // add image to image list vector
-        private void addImageToImageList(String filePath) { imageList.Add(new Image<Rgb, byte>(filePath)); }
+        private void addImageFileNameToList(String filePath) { imageFileNameList.Add(filePath); }
 
         // add image to listbox
-        private void addImageToListBox(String filePath) { imgListBox.Items.Add(filePath.Substring(filePath.LastIndexOf('\\') + 1)); }
+        private void addImageFileNameToListBox(String filePath) { imgListBox.Items.Add(filePath.Substring(filePath.LastIndexOf('\\') + 1)); }
 
-        private void addImage(String filePath)
+        // adds image file names to the app
+        private void addImageFileName(String filePath)
         {
-            addImageToImageList(filePath);
-            addImageToListBox(filePath);
+            addImageFileNameToList(filePath);
+            addImageFileNameToListBox(filePath);
         }
-        
+
         //insert images
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -59,8 +60,8 @@ namespace Image_to_Video
                 ofd1.Multiselect = true;
 
                 if (ofd1.ShowDialog() == DialogResult.OK)    //show the dialog, and if result is ok, upload the image
-                    foreach(String filePath in ofd1.FileNames)
-                        addImage(filePath);
+                    foreach (String filePath in ofd1.FileNames)
+                        addImageFileName(filePath);
             }
             catch (Exception ex)
             {
@@ -93,7 +94,7 @@ namespace Image_to_Video
                         String last_file = ofd.FileNames[last_index].Substring(ofd.FileNames[last_index].LastIndexOf('\\') + 1);
                         uploadText.Text = path + "\"" + first_file + "\"...\"" + last_file + "\"";
                     }
-                        
+
                     //update textbox of the file path
                     //uploadText.Text = ofd1.FileName;
 
@@ -115,7 +116,7 @@ namespace Image_to_Video
                 try
                 {
                     foreach (String filePath in ofd.FileNames)
-                        addImage(filePath);
+                        addImageFileName(filePath);
                 }
                 catch (Exception ex)
                 {
