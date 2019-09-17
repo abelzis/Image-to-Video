@@ -17,8 +17,8 @@ namespace Image_to_Video
 {
     public partial class Form1 : Form
     {
-        OpenFileDialog ofd;
-        List<String> imageFileNameList;
+        private OpenFileDialog ofd;
+        public List<String> imageFileNameList;
 
         public Form1()
         {
@@ -62,6 +62,7 @@ namespace Image_to_Video
                 if (ofd1.ShowDialog() == DialogResult.OK)    //show the dialog, and if result is ok, upload the image
                     foreach (String filePath in ofd1.FileNames)
                         addImageFileName(filePath);
+                ofd1.Dispose();
             }
             catch (Exception ex)
             {
