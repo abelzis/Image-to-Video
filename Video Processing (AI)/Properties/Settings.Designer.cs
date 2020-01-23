@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Video_Processing__AI__Machine_Learning.Properties
+namespace Video_Processing__AI_.Properties
 {
 
 

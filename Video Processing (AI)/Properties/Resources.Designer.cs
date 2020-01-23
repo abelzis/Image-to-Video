@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Video_Processing__AI__Machine_Learning.Properties
+namespace Video_Processing__AI_.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace Video_Processing__AI__Machine_Learning.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Video_Processing__AI__Machine_Learning.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Video_Processing__AI_.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
